@@ -15,15 +15,14 @@ pipeline {
         stage('Compile MAIN') {
             steps {
                 sh "pwd"
-                sh "mvn -Dmaven.repo.local=${WORKSPACE}/develop/m2/repository -U clean install -DskipTests"
+                sh "mvn -Dmaven.repo.local=${WORKSPACE}/develop/m2/repository -f ${WORKSPACE}/pom.xml -U clean install -DskipTests"
             }
         }
 
         stage('Compile KJAR') {
             steps {
-                sh "cd ${WORKSPACE}/kjar/"
                 sh "pwd"
-                sh "mvn -Dmaven.repo.local=${WORKSPACE}/develop/m2/repository -U clean install -DskipTests"
+                sh "mvn -Dmaven.repo.local=${WORKSPACE}/develop/m2/repository -f ${WORKSPACE}/kjar/pom.xml -U clean install -DskipTests"
             }
         }
 

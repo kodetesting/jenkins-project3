@@ -1,6 +1,18 @@
 pipeline {
     agent any
     stages {
+        stage('jdkVersion') {
+            steps {
+                sh 'java -version'
+            }
+        }
+
+        stage('JBPMPackageValidation') {
+            steps {
+                sh "mkdir develop"
+            }
+        }
+
         stage('build') {
             steps {
                 echo 'Build Project...!!'

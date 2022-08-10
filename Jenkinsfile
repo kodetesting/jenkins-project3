@@ -12,16 +12,18 @@ pipeline {
             }
         }
 
-        stage('Compile Code-MAIN') {
+        stage('Compile MAIN') {
             steps {
                 sh "pwd"
                 sh "mvn -Dmaven.repo.local=${WORKSPACE}/develop/m2/repository -U clean install"
             }
         }
 
-        stage('build') {
+        stage('Compile SERVICE') {
             steps {
-                echo 'Build Project...!!'
+                sh "cd service/"
+                sh "pwd"
+                sh "mvn -Dmaven.repo.local=${WORKSPACE}/develop/m2/repository -U clean install"
             }
         }
 

@@ -15,7 +15,7 @@ pipeline {
         stage('Compile MAIN') {
             steps {
                 sh "pwd"
-                sh "mvn -Dmaven.repo.local=${WORKSPACE}/develop/m2/repository -U clean install"
+                sh "mvn -Dmaven.repo.local=${WORKSPACE}/develop/m2/repository -U clean install -DskipTests"
             }
         }
 
@@ -23,7 +23,7 @@ pipeline {
             steps {
                 sh "cd kjar/"
                 sh "pwd"
-                sh "mvn -Dmaven.repo.local=${WORKSPACE}/develop/m2/repository -U clean install"
+                sh "mvn -Dmaven.repo.local=${WORKSPACE}/develop/m2/repository -U clean install -DskipTests"
             }
         }
 

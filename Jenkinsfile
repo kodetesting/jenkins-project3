@@ -7,12 +7,6 @@ pipeline {
             }
         }
 
-        stage('JBPMPackageValidation') {
-            steps {
-                sh "mkdir develop"
-            }
-        }
-
         stage('Compile Code-MAIN') {
             steps {
                 sh "pwd"

@@ -21,7 +21,7 @@ pipeline {
 
         stage('Compile KJAR') {
             steps {
-                sh "cd kjar/"
+                sh "cd ${WORKSPACE}/kjar/"
                 sh "pwd"
                 sh "mvn -Dmaven.repo.local=${WORKSPACE}/develop/m2/repository -U clean install -DskipTests"
             }

@@ -85,16 +85,7 @@
             <version>3.1.0</version>
             <scope>compile</scope>
         </dependency>
-        <dependency>
-            <groupId>com.verifone</groupId>
-            <artifactId>order-service-consumer-model</artifactId>
-            <version>2.19.2</version>
-        </dependency>
-        <dependency>
-            <groupId>com.verifone.mopauthclient</groupId>
-            <artifactId>mop-auth-client</artifactId>
-            <version>${mop-auth-client.version}</version>
-        </dependency>
+
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
@@ -235,6 +226,35 @@
             <version>2.5</version>
             <scope>compile</scope>
         </dependency>
+
+        <dependency>
+            <groupId>com.github.jknack</groupId>
+            <artifactId>handlebars</artifactId>
+            <version>4.1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.zxing</groupId>
+            <artifactId>core</artifactId>
+            <version>3.3.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.zxing</groupId>
+            <artifactId>javase</artifactId>
+            <version>3.3.0</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>1.9.4</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!--
+        <dependency>
+            <groupId>com.verifone.common</groupId>
+            <artifactId>mop-logging</artifactId>
+            <version>0.5.7</version>
+        </dependency>
         <dependency>
             <groupId>com.verifone.messaging.service</groupId>
             <artifactId>messaging-service-client</artifactId>
@@ -256,33 +276,16 @@
             <version>1.1.1-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>com.github.jknack</groupId>
-            <artifactId>handlebars</artifactId>
-            <version>4.1.2</version>
+            <groupId>com.verifone</groupId>
+            <artifactId>order-service-consumer-model</artifactId>
+            <version>2.19.2</version>
         </dependency>
         <dependency>
-            <groupId>com.google.zxing</groupId>
-            <artifactId>core</artifactId>
-            <version>3.3.0</version>
+            <groupId>com.verifone.mopauthclient</groupId>
+            <artifactId>mop-auth-client</artifactId>
+            <version>${mop-auth-client.version}</version>
         </dependency>
-        <dependency>
-            <groupId>com.google.zxing</groupId>
-            <artifactId>javase</artifactId>
-            <version>3.3.0</version>
-        </dependency>
-
-        <!--COMMON LOGGING-->
-        <dependency>
-            <groupId>com.verifone.common</groupId>
-            <artifactId>mop-logging</artifactId>
-            <version>0.5.7</version>
-        </dependency>
-        <dependency>
-            <groupId>commons-beanutils</groupId>
-            <artifactId>commons-beanutils</artifactId>
-            <version>1.9.4</version>
-            <scope>compile</scope>
-        </dependency>
+        -->
     </dependencies>
     <repositories>
         <repository>

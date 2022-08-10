@@ -19,16 +19,17 @@ pipeline {
             }
         }
 
+        stage('Compile Model') {
+            steps {
+                sh "pwd"
+                sh "mvn -Dmaven.repo.local=${WORKSPACE}/develop/m2/repository -f ${WORKSPACE}/model/pom.xml -U clean install -DskipTests"
+            }
+        }
+
         stage('Compile KJAR') {
             steps {
                 sh "pwd"
                 sh "mvn -Dmaven.repo.local=${WORKSPACE}/develop/m2/repository -f ${WORKSPACE}/kjar/pom.xml -U clean install -DskipTests"
-            }
-        }
-
-        stage('test') {
-            steps {
-                echo 'Running TestCases within Project.'
             }
         }
 
